@@ -1525,7 +1525,7 @@ void ErrorAnalyzer::add_error_combinations(
     std::array<SpanRef<const DemTarget>, s> basis_errors,
     bool probabilities_are_disjoint) {
     std::array<uint64_t, 1 << s> detector_masks{};
-    FixedCapVector<DemTarget, 16> involved_detectors{};
+    FixedCapVector<DemTarget, 64> involved_detectors{};
     std::array<SpanRef<const DemTarget>, 1 << s> stored_ids;
 
     for (size_t k = 0; k < s; k++) {
